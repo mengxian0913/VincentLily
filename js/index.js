@@ -69,3 +69,40 @@ function close_big(){
 birthdayCard.addEventListener("click", show_big);
 
 Close.addEventListener("click", close_big);
+
+
+/*slide*/
+
+/*
+const tmp_ul = document.querySelector('#slide-ul');
+const tmp_li = tmp_ul.querySelectorAll('li');
+const arr_li = new Array();
+
+for(var i=0; i<tmp_li.length; i++){
+    arr_li.push(tmp_li[i]);
+    console.log(arr_li[i]);
+}
+
+for(let i=0;i<2;i++){
+    for(let k=0;k<arr_li.length;k++){
+        var child_li = document.createElement('li');
+        var tmp_img = new Image();
+        tmp_img = arr_li[i].querySelector('img');
+        child_li.appendChild(img);
+        tmp_ul.appendChild(child_li);
+        console.log(child_li);
+    }
+}
+*/
+
+const ul = document.querySelector('#slide-ul');
+const lis = ul.querySelectorAll('li');
+const liArr = Array.from(lis);
+
+for (let i = 0; i < 100; i++) {
+    for (let li of liArr) {
+        let cloneLi = li.cloneNode(true);
+        ul.appendChild(cloneLi);
+    }
+}
+

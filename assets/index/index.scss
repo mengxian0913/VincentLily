@@ -519,17 +519,13 @@ nav{
 }
 
 @keyframes slide {
-    0% { transform: translateX(-10%); }
-    10% { transform: translateX(-20%); }
-    20% { transform: translateX(-30%); }
-    30% { transform: translateX(-40%); }
-    40% { transform: translateX(-50%); }
-    50% { transform: translateX(-60%); }
-    60% { transform: translateX(-70%); }
-    70% { transform: translateX(-80%); }
-    90% { transform: translateX(-90%); }
-    90% { transform: translateX(-100%); }
-    100%  { transform: translateX(0%); }
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 .sec3{
@@ -537,7 +533,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    // overflow: hidden;
 
     .slide-container{
         display: flex;
@@ -547,11 +542,11 @@ nav{
         overflow: hidden;
 
         ul{
-            animation: slide 10s linear infinite;
             list-style-type: none;
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: slide 1000s linear infinite;
             
             li{
                 margin: 0 20px 0 20px;
