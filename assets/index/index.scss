@@ -240,7 +240,7 @@ nav{
     top: 95px;
     left: 43px;
 
-    @media (min-width: 830px){
+    @media screen and(min-width: 830px){
         width: 2px;
         height: 310px;
         top: 190px;
@@ -256,7 +256,7 @@ nav{
     top: 94px;
     left: 37px;
 
-    @media (min-width: 830px){
+    @media screen and (min-width: 830px){
         border-left: 14px solid transparent;
         border-right: 14px solid transparent;
         top: 188px;
@@ -705,7 +705,7 @@ nav{
     }
 }
 
-@media (min-width: 830px){
+@media screen and(min-width: 830px){
 
     .container .hamburger{
         display: none;

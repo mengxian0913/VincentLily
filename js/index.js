@@ -1,35 +1,37 @@
 let width = screen.width;
 const hamburger = document.querySelector('.hamburger');
 const container2 = document.querySelector('.container2');
-const a = document.querySelector('.aa');
-const b = document.querySelector('.bb');
-const c = document.querySelector('.cc');
-const d = document.querySelector('.dd');
-const e = document.querySelector('.aa2');
-const f = document.querySelector('.bb2');
-const g = document.querySelector('.cc2');
-const h = document.querySelector('.dd2');
-const arr = [a, b, c, d, e, f, g, h];
-let len = arr.length;
+const menu1 = document.querySelector('.menu');
+const menuArr = menu1.querySelectorAll('a');
+const menu2 = document.querySelector('.menu2');
+const menuArr2 = menu2.querySelectorAll('a');
 
-function rm(){
-    for(var i=0;i<len;i++){
+function rm(arr){
+    for(let i=0;i<arr.length;i++){
         arr[i].classList.remove('is-active');
     }
 }
 
+for(let i=0;i<menuArr.length;i++){
+    menuArr[i].addEventListener('click', function(){
+        rm(menuArr);
+        this.classList.add('is-active');
+    });
+}
+
+for(let i=0;i<menuArr2.length;i++){
+    menuArr2[i].addEventListener('click', function(){
+        rm(menuArr2);
+        this.classList.add('is-active');
+    });
+}
+
+
+/*hamburger*/
 hamburger.addEventListener('click', function(){
     this.classList.toggle('is-active');
     container2.classList.toggle('is-active');
 });
-
-for(var i=0;i<len;i++)
-{
-    arr[i].addEventListener('click', function(){
-        rm();
-        this.classList.add('is-active');
-    });
-}
 
 /*birthdayCard*/
 const containerF = document.querySelector('.containerF');
