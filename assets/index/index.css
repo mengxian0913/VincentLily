@@ -977,15 +977,6 @@ nav {
   }
 }
 @media (min-width: 830px) {
-  .sec3 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-around;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 830px) {
   .timeline::before {
     content: "";
     position: absolute;

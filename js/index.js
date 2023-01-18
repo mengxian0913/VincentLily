@@ -77,7 +77,7 @@ const ul = document.querySelector('#slide-ul');
 const lis = ul.querySelectorAll('li');
 const liArr = Array.from(lis);
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 10; i++) {
     for (let li of liArr) {
         let cloneLi = li.cloneNode(true);
         ul.appendChild(cloneLi);
