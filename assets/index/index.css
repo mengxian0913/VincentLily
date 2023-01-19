@@ -607,8 +607,9 @@ nav {
   height: 40vh;
   background: url("../../photo/background-img/IMG_1237.jpg");
   background-size: cover;
-  background-attachment: relative;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  /* transform: translateZ(0); */
 }
 
 .sec5 {
@@ -1046,6 +1047,9 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+  .sec4 .bg {
+    display: none;
   }
 }
 @media screen and (min-width: 830px) {

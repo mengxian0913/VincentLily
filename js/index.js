@@ -83,3 +83,12 @@ setInterval(function() {
     track.style.transition = 'transform 1s ease-in-out';
     track.style.transform = 'translateX(-25%)';
 }, 3000);
+
+
+var section = document.getElementById("sec4");
+var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (isSafari) {
+    section.style.backgroundAttachment = "scroll";
+} else {
+    section.style.backgroundAttachment = "fixed";
+}
