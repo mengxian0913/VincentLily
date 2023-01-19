@@ -1,4 +1,4 @@
-let width = screen.width;
+var width = screen.width;
 const hamburger = document.querySelector('.hamburger');
 const container2 = document.querySelector('.container2');
 const menu1 = document.querySelector('.menu');
@@ -71,18 +71,15 @@ function close_big(){
 birthdayCard.addEventListener("click", show_big);
 
 Close.addEventListener("click", close_big);
+  
 
+/*Slide Window*/
 
-/*slide*/
+const slide_track = document.querySelector('.slide-track');
+const slide = document.querySelector('.slide');
 
-const ul = document.querySelector('#slide-ul');
-const lis = ul.querySelectorAll('li');
-const liArr = Array.from(lis);
-
-for (let i = 0; i < 100; i++) {
-    for (let li of liArr) {
-        let cloneLi = li.cloneNode(true);
-        ul.appendChild(cloneLi);
-    }
-}
-
+setInterval(function() {
+    var track = document.querySelector('.slide-track');
+    track.style.transition = 'transform 1s ease-in-out';
+    track.style.transform = 'translateX(-25%)';
+}, 3000);

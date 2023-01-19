@@ -13,8 +13,7 @@ html {
 }
 
 :root {
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   background-color: rgba(58, 60, 60, 0.1960784314);
 }
@@ -534,66 +533,73 @@ nav {
 }
 
 @-webkit-keyframes slide {
-  from {
-    transform: translateX(0%);
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-25%);
   }
 }
 
 @keyframes slide {
-  from {
-    transform: translateX(0%);
+  0% {
+    transform: translateX(0);
   }
-  to {
-    transform: translateX(-100%);
+  100% {
+    transform: translateX(-25%);
   }
 }
 .sec3 {
-  width: 100%;
+  width: auto;
   height: 100vh;
   background: url("../../photo/background-img/beige-paintbrush-stroke-textured-background.jpg");
   background-size: cover;
   background-attachment: local;
   background-repeat: repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
-.sec3 .slide-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
+.sec3 .slider {
+  width: 100%;
   overflow: hidden;
+  height: 250px;
+  margin: auto;
+  position: relative;
+  display: grid;
+  place-items: center;
 }
-.sec3 .slide-container ul {
-  list-style-type: none;
+.sec3 .slider .slide-track {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: slide 1000s linear infinite;
-          animation: slide 1000s linear infinite;
+  width: 800%;
+  -webkit-animation: slide 20s linear infinite;
+          animation: slide 20s linear infinite;
 }
-.sec3 .slide-container ul li {
-  margin: 0 20px 0 20px;
+.sec3 .slider .slide-track .slide {
+  flex: 2;
+  height: 200px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
-  background: rgba(225, 215, 225, 0.3);
-  -webkit-backdrop-filter: blur(25px);
-          backdrop-filter: blur(25px);
-  overflow: hidden;
-  border-radius: 20px;
+  padding: 15px;
 }
-.sec3 .slide-container ul li img {
-  width: 280px;
-  margin: 0 20px 0 20px;
+.sec3 .slider .slide-track .slide img {
+  width: 100%;
+}
+.sec3 .slider::before, .sec3 .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 15%;
+  z-index: 2;
+}
+.sec3 .slider::before {
   left: 0;
-  width: 250px;
+  top: 0;
+}
+.sec3 .slider::after {
+  right: 0;
+  top: 0;
+  transform: rotate(180deg);
 }
 
 .sec4 {
@@ -1022,6 +1028,14 @@ nav {
   .timeline ul li:nth-child(even)::after {
     transform: translate(-50%, -50%);
     left: -30px;
+  }
+}
+@media screen and (min-width: 830px) {
+  .sec3 .slider .slide-track {
+    width: 400%;
+  }
+  .sec3 .slider .slide-track .slide {
+    flex: 1;
   }
 }
 @media screen and (min-width: 830px) {
