@@ -1,14 +1,12 @@
 import requests
 from bs4 import BeautifulSoup as bs
 
-url = "https://photos.app.goo.gl/VkooBqFk8xmrDEDw5"
+url = "https://mengxian0913.github.io/VincentLily/"
 
 response = requests.get(url)
 soup = bs(response.content, "html.parser")
-
 img_tags = soup.find_all("img")
-
 img_urls = [img["src"] for img in img_tags]
 
-for url in img_urls:
-    print(url)
+import json
+img_data = json.dumps(img_urls)
