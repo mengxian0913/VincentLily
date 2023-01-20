@@ -85,14 +85,6 @@ setInterval(function() {
 }, 3000);
 
 
-// var section = document.getElementById("sec4");
-// var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-// if (isSafari) {
-//     section.style.backgroundAttachment = "scroll";
-// } else {
-//     section.style.backgroundAttachment = "fixed";
-// }
-
 /*Loading*/
 
 document.addEventListener("DOMContentLoaded", function() {
