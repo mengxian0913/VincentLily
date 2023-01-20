@@ -25,7 +25,6 @@ html{
     background-color: #3a3c3c32;
 }
 
-
 @mixin bgsetting($width, $height, $bg, $att, $rep, $size){
     width: $width;
     height: $height;
@@ -35,8 +34,21 @@ html{
     background-repeat: $rep;
 }
 
+.load{
+    background-color: $dark;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: $light;
+}
+
 
 .container{
+    display: none;
     max-width: 1280px;
     width: 100%;
     height: auto;

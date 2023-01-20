@@ -18,7 +18,20 @@ html {
   background-color: rgba(58, 60, 60, 0.1960784314);
 }
 
+.load {
+  background-color: #212121;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #EEEEEE;
+}
+
 .container {
+  display: none;
   max-width: 1280px;
   width: 100%;
   height: auto;
