@@ -584,13 +584,14 @@ nav{
 
 
 .sec4{
-    @include bgsetting(100vw, 40vh, url('../../photo/background-img/IMG_1237.jpg'), fixed, no-repeat, cover);
-    // .bg{
-    //     img{
-    //         width: 100%;
-    //         height: auto;
-    //     }
-    // }
+    height: 30vh;
+    width: 100vw;
+    .bg{
+        img{
+            width: 100%;
+            height: auto;  
+        }
+    }
 }
 
 .sec5{
@@ -955,7 +956,8 @@ nav{
     }
 
     .sec4{
-        @include bgsetting(100vw, 115vh, url('../../photo/background-img/IMG_1237.jpg'), fixed, no-repeat, cover);
+        @include bgsetting(100vw, 115vh, url('../../photo/background-img/IMG_1237.jpg'), fixed, no-repeat, cover);        
+        
         .bg{
             display: none;
         }

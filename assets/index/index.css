@@ -603,12 +603,12 @@ nav {
 }
 
 .sec4 {
+  height: 30vh;
   width: 100vw;
-  height: 40vh;
-  background: url("../../photo/background-img/IMG_1237.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+}
+.sec4 .bg img {
+  width: 100%;
+  height: auto;
 }
 
 .sec5 {
@@ -1046,7 +1046,6 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    transform: translateZ(0);
   }
   .sec4 .bg {
     display: none;
