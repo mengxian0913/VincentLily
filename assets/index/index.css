@@ -602,10 +602,6 @@ nav {
   transform: rotate(180deg);
 }
 
-.sec4 {
-  height: 30vh;
-  width: 100vw;
-}
 .sec4 .bg img {
   width: 100%;
   height: auto;
