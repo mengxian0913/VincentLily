@@ -609,7 +609,6 @@ nav {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /* transform: translateZ(0); */
 }
 
 .sec5 {
@@ -1047,6 +1046,7 @@ nav {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    transform: translateZ(0);
   }
   .sec4 .bg {
     display: none;
